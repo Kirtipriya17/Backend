@@ -14,7 +14,7 @@ exports.verifyToken = (req, res, next) => {
         } else {
             return res.status(401).json({ message: "Token is missing" })
         }
-    } catch (err) {
+    } catch (err) {  
         return res.status(401).json({ message: err })
     }
 }

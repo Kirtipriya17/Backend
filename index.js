@@ -13,6 +13,7 @@ const { Server } =require("socket.io")
 
 
 
+
 const server = express()
 const app = http.createServer(server)
 const io = new Server(app)
@@ -69,7 +70,7 @@ app.listen("3000")
 // })
 
 // for connecting database 
-mongoose.connect(process.env.MONGO_URL).then(()=>{
+mongoose.connect("mongodb://localhost:27017/XYZ").then(()=>{
     console.log("Database Connected")
 }).catch((error)=>{
     console.log(error)
